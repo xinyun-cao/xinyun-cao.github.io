@@ -3,6 +3,19 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+// Open the Lightbox
+function openLightbox(imgElement) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    lightbox.style.display = "block";  // Show the lightbox
+    lightboxImg.src = imgElement.src;  // Set the lightbox image to the clicked image's source
+}
+
+// Close the Lightbox
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
 
 (function($) {
 
@@ -29,6 +42,7 @@
 			small:   [ '481px',   '736px'  ],
 			xsmall:  [ null,      '480px'  ],
 		});
+		
 
 	// Play initial animations on page load.
 		$window.on('load', function() {
