@@ -53,13 +53,28 @@
 							<h2>Recent News (Last Updated: 08/24/2025)</h2>
 						</header>
 						<div class = "column">
+							<p>* Jan 2026 - The full paper of RAVEN is conditionally accepted to CHI 2026! Woohoo!!</p>
+							<p>* Oct 2025 - Our Demo of RAVEN is awarded Best Demo at ASSETS 2025!</p>
 							<p>* July 2025 - Our Demo of RAVEN is accepted to ASSETS 2025. Excited to show it to the ASSETS community in Boulder this October!</p>
 							<p>* June 2025 - I reached candidacy! Very excited to keep honing my research skills and contribute to the field!</p>
 							<p>* May 2025 - My team presented the preliminary pilot study results of RAVEN in CHI 2025 as LBW.</p>
 							<p>* Oct 2024 - Presented SoundModVR in UIST and ASSETS. Great to see so many new faces!</p>
-							<p>* July 2024 - My paper SoundModVR is accepted as full paper and demo to ASSETS 24, as well as demo to UIST 24. See you all in Pittsburgh and Newfoundland this October!</p>
-							<p>* Aug 2023 - I have started my PhD program at University of Michigan. Go Blues!</p>
-							<p>* July 2023 - Our paper about dual body bimanual coordination in VR is presented in DIS 2023!</p>
+							<p>* July 2024 - Our paper SoundModVR is accepted as full paper and demo to ASSETS 24, as well as demo to UIST 24. See you all in Pittsburgh and Newfoundland this October!</p>
+							<button id="news-toggle" type="button" class="button small">Show more</button>
+							<div id="more-news" style="display:none;">
+								<p>* Aug 2023 - I have started my PhD program at University of Michigan. Go Blues!</p>
+								<p>* July 2023 - Our paper about dual body bimanual coordination in VR is presented in DIS 2023!</p>
+							</div>
+							<script>
+								(function(){
+									var btn = document.getElementById('news-toggle');
+									var more = document.getElementById('more-news');
+									btn.addEventListener('click', function(){
+										if (more.style.display === 'none') { more.style.display = 'block'; btn.textContent = 'Show less'; }
+										else { more.style.display = 'none'; btn.textContent = 'Show more'; }
+									});
+								})();
+							</script>
 						</div>
 					</section>
 
